@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Career Crafter</title>
+    <style>
+        .cn {
+            background-color: #ff6600; /* Eye-catching orange */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: center;
+            align
+        }
+
+        .cn:hover {
+            background-color: #ff4500; /* Darker shade for hover effect */
+            transform: scale(1.05); /* Slight enlargement */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Career Crafter</h1>
+        </header>
+        <main>
+            <div class="result-container">
+                <h2>RESULT</h2>
+                <div class="output">
+                    <p>{{ output }}</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+            <div class="result1-container">
+                <h2>PROJECT SUGGESTIONS</h2>
+                <div class="output2">
+                    <h1>{{ output2 }}</h1>
+                </div>
+
+                <!-- Correct Form -->
+
+
+                <form action="/suggestion" method="GET">
+                    <button class="cn" type="submit">Project Suggestions</button>
+                </form>
+              </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+</html>

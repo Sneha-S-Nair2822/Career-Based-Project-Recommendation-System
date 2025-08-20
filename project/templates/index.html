@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Placement Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PREDICTION</h1>
+        </header>
+        <form action="{{ url_for('predict') }}" method="GET">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="Self Learning Capability">Self Learning Capability</label>
+                    <select id="Self Learning Capability" name="Self Learning Capability" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="Extra courses">Extra courses</label>
+                    <select id="Extra courses" name="Extra courses" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Took advice from seniors or elders">Took advice from seniors or elders</label>
+                    <select id="Took advice from seniors or elders" name="Took advice from seniors or elders" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Team Co-ordination Skill">Team Co-ordination Skill</label>
+                    <select id="Team Co-ordination Skill" name="Team Co-ordination Skill" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Introvert">Introvert</label>
+                    <select id="Introvert" name="Introvert" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Reading and writing skills">Reading and writing skills</label>
+                    <select id="Reading and writing skills" name="Reading and writing skills" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">poor</option>
+                        <option value="1">medium</option>
+                        <option value="2">excellent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Memory capability score">Memory capability score</label>
+                    <select id="Memory capability score" name="Memory capability score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">poor</option>
+                        <option value="1">medium</option>
+                        <option value="2">excellent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Interested Subjects">Interested Subjects</label>
+                    <select id="Interested Subjects" name="Interested Subjects" required>
+                        <option value="" disabled selected>Select</option>    <option>Programming</option>
+                        <option>Management</option>
+                        <option>Data Engineering</option>
+                        <option>Networks</option>
+                        <option>Software Engineering</option>
+                        <option>Cloud Computing</option>
+                        <option>Parallel Computing</option>
+                        <option>IoT</option>
+                        <option>Computer Architecture</option>
+                        <option>Hacking</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Interested Books Category">Interested Books Category</label>
+                    <select id="Interested Books Category" name="Interested Books Category" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>Series</option>
+                        <option>Autobiographies</option>
+                        <option>Travel</option>
+                        <option>Guide</option>
+                        <option>Health</option>
+                        <option>Journals</option>
+                        <option>Anthology</option>
+                        <option>Dictionaries</option>
+                        <option>Prayer books</option>
+                        <option>Art</option>
+                        <option>Encyclopedias</option>
+                        <option>Religion-Spirituality</option>
+                        <option>Action and Adventure</option>
+                        <option>Comics</option>
+                        <option>Horror</option>
+                        <option>Satire</option>
+                        <option>Self help</option>
+                        <option>History</option>
+                        <option>Cookbooks</option>
+                        <option>Math</option>
+                        <option>Biographies</option>
+                        <option>Drama</option>
+                        <option>Diaries</option>
+                        <option>Science fiction</option>
+                        <option>Poetry</option>
+                        <option>Romance</option>
+                        <option>Science</option>
+                        <option>Trilogy</option>
+                        <option>Fantasy</option>
+                        <option>Children's</option>
+                        <option>Mystery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="certifications">certifications</label>
+                    <select id="certifications" name="certifications" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>Information Security</option>
+                        <option>Shell Programming</option>
+                        <option>R Programming</option>
+                        <option>Distro Making</option>
+                        <option>Machine Learning</option>
+                        <option>Full Stack</option>
+                        <option>Hadoop</option>
+                        <option>App Development</option>
+                        <option>Python</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Workshops Attended">Workshops Attended</label>
+                    <select id="Workshops Attended" name="Workshops Attended" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>Testing</option>
+                        <option>Database Security</option>
+                        <option>Game Development</option>
+                        <option>Data Science</option>
+                        <option>System Designing</option>
+                        <option>Hacking</option>
+                        <option>Cloud Computing</option>
+                        <option>Web Technologies</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Type of Company You Want to Settle In">Type of Company You Want to Settle In</label>
+                    <select id="Type of Company You Want to Settle In" name="Type of Company You Want to Settle In" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>BPA</option>
+                        <option>Cloud Services</option>
+                        <option>Product Development</option>
+                        <option>Testing and Maintenance Services</option>
+                        <option>SaaS Services</option>
+                        <option>Web Services</option>
+                        <option>Finance</option>
+                        <option>Sales and Marketing</option>
+                        <option>Product Based</option>
+                        <option>Service Based</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Interested Career Area">Interested Career Area</label>
+                    <select id="Interested Career Area" name="Interested Career Area" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>Testing</option>
+                        <option>System Developer</option>
+                        <option>Business Process Analyst</option>
+                        <option>Security</option>
+                        <option>Developer</option>
+                        <option>Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Logical quotient Skills">Logical quotient Skills</label>
+                    <input type="number" id="Logical quotient Skills" name="Logical quotient Skills" min="0" max="10" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="Coding Skills">Coding Skills</label>
+                    <input type="number" id="Coding Skills" name="Coding Skills" min="0" max="10" step="1" required>
+                </div>
+                <div class="Hackathons participated">
+                    <label for="Hackathons participated">Hackathons participated</label>
+                    <input type="number" id="Hackathons participated" name="Hackathons participated" min="0" max="10" step="1" required>
+                </div>
+                <div class="Public Speaking">
+                    <label for="Public Speaking">Public Speaking</label>
+                    <input type="number" id="Public Speaking" name="Public Speaking" min="0" max="10" step="1" required>
+                </div>
+
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
